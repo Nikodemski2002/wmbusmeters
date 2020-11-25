@@ -52,6 +52,7 @@
     X(lansendw,   T1_bit, DoorWindowDetector,  LANSENDW,    LansenDW)     \
     X(lansenpu,   T1_bit, PulseCounter,     LANSENPU,    LansenPU)     \
     X(mkradio3,   T1_bit, WaterMeter,       MKRADIO3,    MKRadio3)     \
+    X(mkradio4,   T1_bit, WaterMeter,       MKRADIO4,    MKRadio4)     \
     X(multical21, C1_bit|T1_bit, WaterMeter,       MULTICAL21,  Multical21)   \
     X(multical302,C1_bit, HeatMeter,        MULTICAL302, Multical302)  \
     X(multical403,C1_bit, HeatMeter,        MULTICAL403, Multical403)  \
@@ -117,6 +118,7 @@
     X(IZAR,      MANUFACTURER_SAP,  0x66,    -1) \
     X(IZAR,      MANUFACTURER_DME,  0x66,    -1) \
     X(IZAR,      MANUFACTURER_DME,  0x19,  0x00) \
+    X(IZAR,      MANUFACTURER_DME,  0x20,  0x48) \
     X(IZAR3,     MANUFACTURER_SAP,  0x00,  0x88) \
     X(LANSENSM,  MANUFACTURER_LAS,  0x1a,  0x03) \
     X(LANSENTH,  MANUFACTURER_LAS,  0x1b,  0x07) \
@@ -125,6 +127,8 @@
     X(LANSENPU,  MANUFACTURER_LAS,  0x00,  0x0b) \
     X(MKRADIO3,  MANUFACTURER_TCH, 0x62,  0x74) \
     X(MKRADIO3,  MANUFACTURER_TCH, 0x72,  0x74) \
+    X(MKRADIO4,  MANUFACTURER_TCH, 0x62,  0x95) \
+    X(MKRADIO4,  MANUFACTURER_TCH, 0x72,  0x95) \
     X(MULTICAL21, MANUFACTURER_KAM,  0x06,  0x1b) \
     X(MULTICAL21, MANUFACTURER_KAM,  0x16,  0x1b) \
     X(MULTICAL302,MANUFACTURER_KAM, 0x04,  0x30) \

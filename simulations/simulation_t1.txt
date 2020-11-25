@@ -38,6 +38,12 @@ telegram=|2F446850313233347462A2|069F255900B029310000000306060906030609070606050
 {"media":"warm water","meter":"mkradio3","name":"Duschen","id":"34333231","total_m3":13.8,"target_m3":8.9,"timestamp":"1111-11-11T11:11:11Z"}
 |Duschen;34333231;13.800000;8.900000;1111-11-11 11:11.11
 
+# Test MKRadio4 T1 telegrams
+
+telegram=|2F446850200141029562A2|06702901006017030004000300000000000000000000000000000000000000000000000000|
+{"media":"warm water","meter":"mkradio4","name":"Duschagain","id":"02410120","total_m3":0.4,"target_m3":0.1,"timestamp":"1111-11-11T11:11:11Z"}
+|Duschagain;02410120;0.400000;0.100000;1111-11-11 11:11.11
+
 # Test vario451 T1 telegrams
 telegram=|374468506549235827C3A2|129F25383300A8622600008200800A2AF862115175552877A36F26C9AB1CB24400000004000000000004908002|
 {"media":"heat","meter":"vario451","name":"HeatMeter","id":"58234965","total_kwh":6371.666667,"current_kwh":2729.444444,"previous_kwh":3642.222222,"timestamp":"1111-11-11T11:11:11Z"}
@@ -45,7 +51,7 @@ telegram=|374468506549235827C3A2|129F25383300A8622600008200800A2AF86211517555287
 
 # Test FHKV data II/III
 telegram=|31446850226677116980A0119F27020480048300C408F709143C003D341A2B0B2A0707000000000000062D114457563D71A1850000|
-{"media":"Heat Cost Allocator","meter":"fhkvdataiii","name":"Room","id":"11776622","current_hca":131,"current_date":"2020-02-08T02:00:00Z","previous_hca":1026,"previous_date":"2019-12-31T02:00:00Z","temp_room_c":22.44,"temp_radiator_c":25.51,"timestamp":"1111-11-11T11:11:11Z"}
+{"media":"heat cost allocator","meter":"fhkvdataiii","name":"Room","id":"11776622","current_hca":131,"current_date":"2020-02-08T02:00:00Z","previous_hca":1026,"previous_date":"2019-12-31T02:00:00Z","temp_room_c":22.44,"temp_radiator_c":25.51,"timestamp":"1111-11-11T11:11:11Z"}
 |Room;11776622;131.000000;2020-02-08T02:00:00Z;1026.000000;2019-12-31T02:00:00Z;22.440000;25.510000;1111-11-11 11:11.11
 
 # Test EurisII T1 telegrams
@@ -103,6 +109,12 @@ telegram=|1944304C72242421D401A2|013D4013DD8B46A4999C1293E582CC|
 telegram=|2944A511780729662366A20118001378D3B3DB8CEDD77731F25832AAF3DA8CADF9774EA673172E8C61F2|
 {"media":"water","meter":"izar","name":"IzarWater2","id":"66290778","total_m3":16.76,"last_month_total_m3":11.84,"last_month_measure_date":"2019-11-30","remaining_battery_life_y":12,"current_alarms":"no_alarm","previous_alarms":"no_alarm","timestamp":"1111-11-11T11:11:11Z"}
 |IzarWater2;66290778;16.760000;11.840000;2019-11-30;12.000000;no_alarm;no_alarm;1111-11-11 11:11.11
+
+# Yet another silly version of IZAR, come again, type 0x20 = Breaker (electricity) for a water meter!
+
+telegram=|1944A511780779194820A1|21170013355F8EDB2D03C6912B1E37
+{"media":"water","meter":"izar","name":"IzarWater3","id":"19790778","total_m3":4.366,"last_month_total_m3":0,"last_month_measure_date":"2020-12-31","remaining_battery_life_y":11.5,"current_alarms":"no_alarm","previous_alarms":"no_alarm","timestamp":"1111-11-11T11:11:11Z"}
+|IzarWater3;19790778;4.366000;0.000000;2020-12-31;11.500000;no_alarm;no_alarm;1111-11-11 11:11.11
 
 # Test Hydrus water meter telegram
 telegram=|4E44A5116464646470077AED004005|2F2F01FD08300C13741100007C1300000000FC101300000000FC201300000000726C00000B3B00000002FD748713025A6800C4016D3B177F2ACC011300020000|

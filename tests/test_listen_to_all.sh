@@ -55,6 +55,11 @@ Received telegram from: 34333231
                   type: Warm water (0x62)
                    ver: 0x74
                 driver: mkradio3
+Received telegram from: 02410120
+          manufacturer: (TCH) Techem Service (0x5068)
+                  type: Warm water (0x62)
+                   ver: 0x95
+                driver: mkradio4
 Received telegram from: 58234965
           manufacturer: (TCH) Techem Service (0x5068)
                   type: Heat meter (0xc3)
@@ -114,6 +119,11 @@ Received telegram from: 66290778
           manufacturer: (DME) DIEHL Metering, Germany (0x11a5)
                   type: Unknown (0x66)
                    ver: 0x23
+                driver: izar
+Received telegram from: 19790778
+          manufacturer: (DME) DIEHL Metering, Germany (0x11a5)
+                  type: Breaker (electricity) (0x20)
+                   ver: 0x48
                 driver: izar
 Received telegram from: 64646464
           manufacturer: (DME) DIEHL Metering, Germany (0x11a5)

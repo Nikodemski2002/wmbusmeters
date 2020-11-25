@@ -135,6 +135,7 @@ METER_OBJS:=\
 	$(BUILD)/meter_lansenth.o \
 	$(BUILD)/meter_lansenpu.o \
 	$(BUILD)/meter_mkradio3.o \
+	$(BUILD)/meter_mkradio4.o \
 	$(BUILD)/meter_multical21.o \
 	$(BUILD)/meter_multical302.o \
 	$(BUILD)/meter_multical403.o \
@@ -175,7 +176,7 @@ all: $(BUILD)/wmbusmeters $(BUILD)/wmbusmeters-admin $(BUILD)/testinternals
 	@$(STRIP_BINARY)
 	@cp $(BUILD)/wmbusmeters $(BUILD)/wmbusmetersd
 
-dist: wmbusmeters_$(DEBVERSION)_$(DEBARCH).deb
+deb: wmbusmeters_$(DEBVERSION)_$(DEBARCH).deb
 
 install: $(BUILD)/wmbusmeters
 	@./install.sh $(BUILD)/wmbusmeters $(DESTDIR) $(EXTRA_INSTALL_OPTIONS)
@@ -193,6 +194,10 @@ wmbusmeters_$(DEBVERSION)_$(DEBARCH).deb:
 	@echo "Maintainer: Fredrik Öhrström" >> $(BUILD)/debian/wmbusmeters/DEBIAN/control
 	@echo "Architecture: $(DEBARCH)" >> $(BUILD)/debian/wmbusmeters/DEBIAN/control
 	@echo "Description: A tool to read wireless mbus telegrams from utility meters." >> $(BUILD)/debian/wmbusmeters/DEBIAN/control
+	@for x in preinst postinst prerm postrm ; do \
+		cp scripts/$$x $(BUILD)/debian/wmbusmeters/DEBIAN/ ; \
+		chmod 555 $(BUILD)/debian/wmbusmeters/DEBIAN/$$x ; \
+	done
 	@(cd $(BUILD)/debian; dpkg-deb --build wmbusmeters .)
 	@mv $(BUILD)/debian/wmbusmeters_$(DEBVERSION)_$(DEBARCH).deb .
 	@echo Built package $@
